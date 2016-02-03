@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Card from './components/Card';
+import AppContainer from './container/app.js';
 
 ReactDOM.render(
-  <Card />,
+  <AppContainer />,
   document.getElementById('root')
 );

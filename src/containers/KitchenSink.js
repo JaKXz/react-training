@@ -11,6 +11,7 @@ import Modal from '../components/Modal';
 import Nav from '../components/Nav';
 import ProfileCard from '../components/ProfileCard';
 import Textarea from '../components/Textarea';
+import duplicateInstances from '../factories/duplicate-instances';
 
 class KitchenSink extends Component {
   constructor(props) {
@@ -49,8 +50,20 @@ class KitchenSink extends Component {
               <hr />
             </div>
             <div className="col col-12">
-              <Card />
-              <Card />
+              {
+                duplicateInstances(<Card />, [{
+                  topic: 'one',
+                  id: 'uniqueme'
+                }, {
+                  topic: 'two',
+                  id: 'another unuqe',
+                  styles: {
+                    inner: {
+                      color: 'red'
+                    }
+                  }
+                }])
+              }
             </div>
           </div>
 

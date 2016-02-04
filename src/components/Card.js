@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const Card = ({ topic }) => {
+const Card = ({ topic, styles }) => {
   return (
     <div className="p2 m2 border inline-block">
       <div
@@ -16,9 +16,7 @@ const Card = ({ topic }) => {
 
 Card.propTypes = {
   topic: PropTypes.string.isRequired,
-};
-Card.defaultProps = {
-  topic: 'Topic',
+  styles: PropTypes.object
 };
 
 const styles = {
@@ -27,5 +25,11 @@ const styles = {
     height: 300,
   },
 };
+
+Card.defaultProps = {
+  topic: 'Topic',
+  styles: styles
+};
+
 
 export default Card;

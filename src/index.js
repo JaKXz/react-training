@@ -15,7 +15,6 @@ const store = compose(
     thunk,
     logger,
   ),
-  window.devToolsExtension ? window.devToolsExtension() : () => {},
 )(createStore)(combineReducers(reducers), {});
 
 import KitchenSink from './containers/KitchenSink';

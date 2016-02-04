@@ -10,7 +10,7 @@ const Button = (props) => {
     className,
   } = props;
 
-  const classes = classNames('btn', 'btn-primary', className);
+  const classes = classNames('btn', 'btn-primary', 'm1', className);
 
   return (
     <button

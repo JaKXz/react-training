@@ -15,14 +15,13 @@ const store = compose(
     thunk,
     logger,
   ),
-  window.devToolsExtension ? window.devToolsExtension() : () => {},
 )(createStore)(combineReducers(reducers), {});
 
-import KitchenSink from './containers/KitchenSink';
+import Counter from './containers/Counter';
 
 ReactDOM.render(
   <Provider store={ store }>
-    <KitchenSink />
+    <Counter />
   </Provider>,
   document.getElementById('root')
 );

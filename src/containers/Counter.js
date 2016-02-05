@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import { increase, decrease } from '../reducers/counter';
@@ -8,7 +8,7 @@ import DisplayNumber from '../components/DisplayNumber';
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter,
+    counterValue: state.counter.get('value'),
   };
 }
 
@@ -19,13 +19,11 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const Counter = (props) => {
-  const { counter, onIncrease, onDecrease } = props;
-
+const Counter = ({ counterValue, onIncrease, onDecrease }) => {
   return (
     <div className="flex">
       <div>
-        <DisplayNumber number={ counter } />
+        <DisplayNumber number={ counterValue } />
       </div>
 
       <div>

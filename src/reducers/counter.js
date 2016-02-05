@@ -1,21 +1,16 @@
 import { fromJS } from 'immutable';
 
-export const INCREASE = '@@reactTraining/INCREASE';
-export const DECREASE = '@@reactTraining/DECREASE';
+const INCREASE = '@@reactTraining/INCREASE';
+const DECREASE = '@@reactTraining/DECREASE';
 
-const INITIAL_STATE = 0;
+const INITIAL_STATE = fromJS({value: 0});
 
-function counterReducer(state = INITIAL_STATE, action = {}) {
-  switch (action.type) {
-    case INCREASE:
-      return state + 1;
-
-    case DECREASE:
-      return state - 1;
-
-    default:
-      return state;
-  }
+export default function counterReducer(state = INITIAL_STATE, action = {}) {
+  const result = {
+    [DECREASE]: decrement,
+    [INCREASE]: increment,
+  }[action.type];
+  return result && result(state) || state;
 }
 
 export function increase() {
@@ -26,4 +21,10 @@ export function decrease() {
   return { type: DECREASE };
 }
 
-export default counterReducer;
+function increment (state) {
+  return state.updateIn(['value'], i => i + 1);;
+}
+
+function decrement (state) {
+  return state.updateIn(['value'], i => i - 1);;
+}

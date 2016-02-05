@@ -1,6 +1,6 @@
 import React, { PropTypes }  from 'react';
 
-const Input = ({ type, value, onChange, disabled, style }) => {
+const Input = ({ type, value, onChange, disabled, style, placeHolder }) => {
   return (
     <input
       type={ type }
@@ -8,7 +8,8 @@ const Input = ({ type, value, onChange, disabled, style }) => {
       className="block col-12 mb1 field"
       disabled={ disabled }
       onChange={ onChange }
-      value={ value } />
+      placeholder={ placeHolder }
+      value={ value }/>
   );
 };
 
@@ -16,6 +17,7 @@ Input.defaultProps = {
   type: 'text',
   disabled: false,
   style: {},
+  placeHolder: '',
 };
 
 Input.propTypes = {
@@ -23,6 +25,7 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
+  placeHolder: PropTypes.string,
 };
 
 export default Input;

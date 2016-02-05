@@ -28,6 +28,7 @@ System.config({
     "react-router": "npm:react-router@2.0.0-rc5",
     "react-router-redux": "npm:react-router-redux@2.1.0",
     "redux": "npm:redux@3.1.5",
+    "redux-actions": "npm:redux-actions@0.9.1",
     "redux-logger": "npm:redux-logger@2.4.0",
     "redux-thunk": "npm:redux-thunk@1.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -334,6 +335,9 @@ System.config({
     "npm:flex-object@2.0.3": {
       "basscss-defaults": "npm:basscss-defaults@2.1.2"
     },
+    "npm:flux-standard-action@0.6.1": {
+      "lodash.isplainobject": "npm:lodash.isplainobject@3.2.0"
+    },
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
     },
@@ -355,6 +359,15 @@ System.config({
     },
     "npm:jsonp@0.2.0": {
       "debug": "npm:debug@2.1.3"
+    },
+    "npm:lodash.isplainobject@3.2.0": {
+      "lodash._basefor": "npm:lodash._basefor@3.0.3",
+      "lodash.isarguments": "npm:lodash.isarguments@3.0.6",
+      "lodash.keysin": "npm:lodash.keysin@3.0.8"
+    },
+    "npm:lodash.keysin@3.0.8": {
+      "lodash.isarguments": "npm:lodash.isarguments@3.0.6",
+      "lodash.isarray": "npm:lodash.isarray@3.0.4"
     },
     "npm:loose-envify@1.1.0": {
       "js-tokens": "npm:js-tokens@1.0.2",
@@ -442,6 +455,10 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:redux-actions@0.9.1": {
+      "flux-standard-action": "npm:flux-standard-action@0.6.1",
+      "reduce-reducers": "npm:reduce-reducers@0.1.2"
     },
     "npm:redux@3.1.5": {
       "loose-envify": "npm:loose-envify@1.1.0",

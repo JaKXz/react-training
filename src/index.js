@@ -18,10 +18,11 @@ const store = compose(
 )(createStore)(combineReducers(reducers), {});
 
 import Counter from './containers/Counter';
+import GuestBook from './containers/GuestBook';
 
 ReactDOM.render(
   <Provider store={ store }>
-    <Counter />
+    <GuestBook />
   </Provider>,
   document.getElementById('root')
 );
